@@ -1,0 +1,78 @@
+- name:                godot-cpp
+  git:                 https://github.com/godotengine/godot-cpp.git
+  tag:                 3.5
+  build-type:          py
+  add-src-files:       true
+
+- name:                sol2
+  url:                 https://github.com/ThePhD/sol2/archive/refs/tags/v3.3.0.zip
+  src_subdir:          sol2-3.3.0
+  build-type:          cmake
+
+- name:                wavpack
+  url:                 https://github.com/dbry/WavPack/archive/refs/tags/5.8.1.zip
+  src_subdir:          WavPack-5.8.1
+  build-type:          cmake
+  cmake-options:       -DWAVPACK_BUILD_PROGRAMS=OFF
+
+- name:                Lua
+  git:                 https://github.com/walterschell/Lua.git
+  tag:                 504ef66
+  build-type:          cmake
+  cmake-options:       -DLUA_ENABLE_SHARED=OFF -DLUA_ENABLE_TESTING=OFF -DLUA_BUILD_BINARY=OFF -DLUA_BUILD_COMPILER=OFF
+
+- name:                zlib-ng
+  url:                 https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.2.5.zip
+  src_subdir:          zlib-ng-2.2.5
+  build-type:          cmake
+  cmake-options:       -DZLIB_COMPAT=OFF -DZLIB_ENABLE_TESTS=OFF -DZLIBNG_ENABLE_TESTS=OFF -DBUILD_GMOCK=OFF
+
+- name:                minizip-ng
+  url:                 https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.0.10.zip
+  src_subdir:          minizip-ng-4.0.10
+  build-type:          cmake
+  cmake-options:       -DMZ_BZIP2=OFF -DMZ_LZMA=OFF
+
+- name:                libpng
+  git:                 https://github.com/pnggroup/libpng.git
+  tag:                 v1.6.50
+  build-type:          cmake
+  cmake-options:       -DPNG_TESTS=OFF -DPNG_SHARED=OFF -DPNG_TOOLS=OFF -DPNG_ARM_NEON=off
+
+- name:                boost
+  url:                 https://github.com/boostorg/boost/releases/download/boost-1.86.0/boost-1.86.0-cmake.zip
+  src_subdir:          boost-1.86.0
+  build-type:          cmake
+  cmake-options-mac:   -DBOOST_CONTEXT_ABI=sysv -DBOOST_CONTEXT_ARCHITECTURE=combined
+
+- name:                hash-library
+  git:                 https://github.com/colugomusic/hash-library.git
+  build-type:          cmake
+
+- name:                madronalib
+  git:                 https://github.com/madronalabs/madronalib.git
+  build-type:          cmake
+  add-src-files:       true
+
+- name:                immer
+  git:                 https://github.com/arximboldi/immer.git
+  tag:                 v0.8.1
+  build-type:          cmake
+  cmake-options:       -Dimmer_BUILD_DOCS=OFF -Dimmer_BUILD_TESTS=OFF -Dimmer_BUILD_EXAMPLES=OFF -Dimmer_BUILD_EXTRAS=OFF
+
+- name:                utfcpp
+  url:                 https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.6.zip
+  src_subdir:          utfcpp-4.0.6
+  build-type:          cmake
+
+- name:                magic_enum
+  url:                 https://github.com/Neargye/magic_enum/archive/refs/tags/v0.9.7.zip
+  src_subdir:          magic_enum-0.9.7
+  build-type:          cmake
+  cmake-options:       -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
+
+- name:                memory
+  url:                 https://github.com/foonathan/memory/archive/refs/tags/v0.7-4.zip
+  src_subdir:          memory-0.7-4
+  build-type:          cmake
+  cmake-options:       -DFOONATHAN_MEMORY_BUILD_EXAMPLES=OFF -DFOONATHAN_MEMORY_BUILD_TESTS=OFF -DFOONATHAN_MEMORY_BUILD_TOOLS=OFF
