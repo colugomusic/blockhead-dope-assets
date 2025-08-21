@@ -3,10 +3,8 @@
 add_library(godot-cpp::godot-cpp UNKNOWN IMPORTED)
 
 set_target_properties(godot-cpp::godot-cpp PROPERTIES
-    IMPORTED_CONFIGURATIONS "Debug;Release"
-    IMPORTED_LOCATION_RELEASE "@godot-cpp_RELEASE_LIB@"
-    IMPORTED_LOCATION_DEBUG   "@godot-cpp_DEBUG_LIB@"
-    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/include/godot-cpp/core"
-    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/include/godot-cpp/gen"
-    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/include/godot-cpp/godot-headers"
+	IMPORTED_CONFIGURATIONS "Debug;Release"
+	IMPORTED_LOCATION_RELEASE "@godot-cpp_RELEASE_LIB@"
+	IMPORTED_LOCATION_DEBUG   "@godot-cpp_DEBUG_LIB@"
+	INTERFACE_INCLUDE_DIRECTORIES "@CMAKE_INSTALL_PREFIX@/include/godot-cpp;@CMAKE_INSTALL_PREFIX@/include/godot-cpp/core;@CMAKE_INSTALL_PREFIX@/include/godot-cpp/gen;@CMAKE_INSTALL_PREFIX@/include/godot-cpp/godot-headers"
 )

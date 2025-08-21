@@ -40,17 +40,16 @@ install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/"
 
 install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/"
 		DESTINATION include/godot-cpp
-		FILES_MATCHING PATTERN "*.h"
+		FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
 )
 
 install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/godot-headers/"
 		DESTINATION include/godot-cpp/godot-headers
 		FILES_MATCHING PATTERN "*.h"
-		PATTERN "*.gen.h" EXCLUDE
 )
 
 install(FILES
 	"${CMAKE_CURRENT_BINARY_DIR}/godot-cppConfig.cmake"
 	"${CMAKE_CURRENT_BINARY_DIR}/godot-cppConfigVersion.cmake"
-	DESTINATION cmake/godot-cpp
+	DESTINATION lib/cmake/godot-cpp
 )
