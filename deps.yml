@@ -78,3 +78,10 @@
 - name:                blahdio
   git:                 https://github.com/colugomusic/blahdio.git
   build-type:          cmake
+
+- name:                expected
+  url:                 https://github.com/TartanLlama/expected/archive/refs/tags/v1.2.0.zip
+  src_subdir:          expected-1.2.0
+  build-type:          cmake
+  cmake-options:       -DEXPECTED_BUILD_TESTS=OFF
+  find-package-name:   tl-expected
