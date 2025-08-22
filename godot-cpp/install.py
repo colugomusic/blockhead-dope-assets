@@ -31,24 +31,6 @@ def get_library_suffix():
 	elif sys.platform == "darwin":
 		return "a"
 
-def copy_headers(src_dir, install_dir):
-	# recursively find header files in src_dir and install them to install_dir,
-	# maintaining the folder structure
-	for root, dirs, files in os.walk(src_dir):
-		for file in files:
-			if file.endswith(".h") or file.endswith(".hpp"):
-				# Get the relative path from src_dir to maintain folder structure
-				rel_path = os.path.relpath(root, src_dir)
-				# Create destination directory path
-				dest_dir = os.path.join(install_dir, rel_path)
-				# Create destination file path
-				dest_file = os.path.join(dest_dir, file)
-				
-				# Ensure destination directory exists
-				os.makedirs(dest_dir, exist_ok=True)
-				
-				shutil.copy(os.path.join(root, file), dest_file)
-
 def cmake_configure(src_dir, build_dir, install_dir, verbose):
 	cmake_cmd = 'cmake'
 	cmake_cmd += f' -B "{build_dir}"'
