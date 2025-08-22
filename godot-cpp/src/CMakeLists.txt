@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.30)
-project(godot-cpp)
+project(godot-cpp NONE)
 
 if (WIN32)
 	set(OS_SUFFIX "windows")

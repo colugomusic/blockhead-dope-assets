@@ -9,12 +9,6 @@
   src_subdir:          sol2-3.3.0
   build-type:          cmake
 
-- name:                wavpack
-  url:                 https://github.com/dbry/WavPack/archive/refs/tags/5.8.1.zip
-  src_subdir:          WavPack-5.8.1
-  build-type:          cmake
-  cmake-options:       -DWAVPACK_BUILD_PROGRAMS=OFF
-
 - name:                Lua
   git:                 https://github.com/walterschell/Lua.git
   tag:                 504ef66
@@ -32,12 +26,14 @@
   src_subdir:          minizip-ng-4.0.10
   build-type:          cmake
   cmake-options:       -DMZ_BZIP2=OFF -DMZ_LZMA=OFF -DMZ_ZSTD=OFF
+  find-package-name:   minizip
 
 - name:                libpng
   git:                 https://github.com/pnggroup/libpng.git
   tag:                 v1.6.50
   build-type:          cmake
   cmake-options:       -DPNG_TESTS=OFF -DPNG_SHARED=OFF -DPNG_TOOLS=OFF -DPNG_ARM_NEON=off
+  find-package-name:   PNG
 
 - name:                boost
   url:                 https://github.com/boostorg/boost/releases/download/boost-1.86.0/boost-1.86.0-cmake.zip
@@ -64,6 +60,7 @@
   url:                 https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.6.zip
   src_subdir:          utfcpp-4.0.6
   build-type:          cmake
+  find-package-name:   utf8cpp
 
 - name:                magic_enum
   url:                 https://github.com/Neargye/magic_enum/archive/refs/tags/v0.9.7.zip
@@ -76,3 +73,8 @@
   src_subdir:          memory-0.7-4
   build-type:          cmake
   cmake-options:       -DFOONATHAN_MEMORY_BUILD_EXAMPLES=OFF -DFOONATHAN_MEMORY_BUILD_TESTS=OFF -DFOONATHAN_MEMORY_BUILD_TOOLS=OFF
+  find-package-name:   foonathan_memory
+
+- name:                blahdio
+  git:                 https://github.com/colugomusic/blahdio.git
+  build-type:          cmake

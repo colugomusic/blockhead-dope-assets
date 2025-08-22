@@ -1,4 +1,4 @@
-from dope_common import *
+from dope import *
 from git import Repo
 import argparse
 import sys
