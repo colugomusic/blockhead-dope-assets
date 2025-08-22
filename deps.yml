@@ -85,3 +85,7 @@
   build-type:          cmake
   cmake-options:       -DEXPECTED_BUILD_TESTS=OFF
   find-package-name:   tl-expected
+
+- name:                bhas
+  git:                 https://github.com/colugomusic/bhas.git
+  build-type:          cmake
