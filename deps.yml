@@ -87,5 +87,6 @@
   find-package-name:   tl-expected
 
 - name:                bhas
-  git:                 https://github.com/colugomusic/bhas.git
+  path:                z:/dv/bhas
+  #git:                 https://github.com/colugomusic/bhas.git
   build-type:          cmake
