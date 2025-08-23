@@ -6,7 +6,6 @@
 
 - name:                sol2
   url:                 https://github.com/ThePhD/sol2/archive/refs/tags/v3.3.0.zip
-  src_subdir:          sol2-3.3.0
   build-type:          cmake
 
 - name:                Lua
@@ -17,13 +16,11 @@
 
 - name:                zlib-ng
   url:                 https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.2.5.zip
-  src_subdir:          zlib-ng-2.2.5
   build-type:          cmake
   cmake-options:       -DZLIB_COMPAT=OFF -DZLIB_ENABLE_TESTS=OFF -DZLIBNG_ENABLE_TESTS=OFF -DBUILD_GMOCK=OFF
 
 - name:                minizip-ng
   url:                 https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.0.10.zip
-  src_subdir:          minizip-ng-4.0.10
   build-type:          cmake
   cmake-options:       -DMZ_BZIP2=OFF -DMZ_LZMA=OFF -DMZ_ZSTD=OFF
   find-package-name:   minizip
@@ -58,19 +55,17 @@
 
 - name:                utfcpp
   url:                 https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.6.zip
-  src_subdir:          utfcpp-4.0.6
   build-type:          cmake
   find-package-name:   utf8cpp
 
 - name:                magic_enum
   url:                 https://github.com/Neargye/magic_enum/archive/refs/tags/v0.9.7.zip
-  src_subdir:          magic_enum-0.9.7
   build-type:          cmake
+  md5:                 22f384763e107f34e552605b20ee18b2
   cmake-options:       -DMAGIC_ENUM_OPT_BUILD_EXAMPLES=OFF -DMAGIC_ENUM_OPT_BUILD_TESTS=OFF
 
 - name:                memory
   url:                 https://github.com/foonathan/memory/archive/refs/tags/v0.7-4.zip
-  src_subdir:          memory-0.7-4
   build-type:          cmake
   cmake-options:       -DFOONATHAN_MEMORY_BUILD_EXAMPLES=OFF -DFOONATHAN_MEMORY_BUILD_TESTS=OFF -DFOONATHAN_MEMORY_BUILD_TOOLS=OFF
   find-package-name:   foonathan_memory
@@ -81,7 +76,6 @@
 
 - name:                expected
   url:                 https://github.com/TartanLlama/expected/archive/refs/tags/v1.2.0.zip
-  src_subdir:          expected-1.2.0
   build-type:          cmake
   cmake-options:       -DEXPECTED_BUILD_TESTS=OFF
   find-package-name:   tl-expected
@@ -91,5 +85,19 @@
   build-type:          cmake
 
 - name:                ez
-  git:                 https://github.com/colugomusic/ez.git
+  path:                z:/dv/ez
+  #git:                 https://github.com/colugomusic/ez.git
+  build-type:          cmake
+
+- name:                ads
+  path:                z:/dv/ads
+  #git:                 https://github.com/colugomusic/ads.git
+  build-type:          cmake
+
+- name:                adrian
+  path:                z:/dv/adrian
+  build-type:          cmake
+
+- name:                readerwriterqueue
+  url:                 https://github.com/cameron314/readerwriterqueue/archive/refs/tags/v1.0.7.zip
   build-type:          cmake
