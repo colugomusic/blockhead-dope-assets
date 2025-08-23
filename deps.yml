@@ -80,3 +80,7 @@
 
 - name:                readerwriterqueue
   url:                 https://github.com/cameron314/readerwriterqueue/archive/refs/tags/v1.0.7.zip
+
+- name:                cs_libguarded
+  git:                 https://github.com/colugomusic/cs_libguarded.git
+  find-package-name:   CsLibGuarded
