@@ -85,5 +85,6 @@
   git:                 https://github.com/colugomusic/cs_libguarded.git
   find-package-name:   CsLibGuarded
 
-- name:                libremidi
-  url:                 https://github.com/celtera/libremidi/archive/refs/tags/v5.3.1.zip
+# - name:                libremidi
+#   url:                 https://github.com/celtera/libremidi/archive/refs/tags/v5.3.1.zip
+#   cmake-options:       -DLIBREMIDI_NO_WINMIDI=ON -DLIBREMIDI_NO_WINUWP=ON -DLIBREMIDI_HEADER_ONLY=ON
