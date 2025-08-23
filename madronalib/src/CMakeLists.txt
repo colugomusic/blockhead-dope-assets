@@ -5,25 +5,31 @@ add_library(madronalib::madronalib ALIAS madronalib)
 target_sources(madronalib PUBLIC
 	FILE_SET HEADERS
 	BASE_DIRS
-		external/sse2neon
-		source
+		${CMAKE_CURRENT_SOURCE_DIR}/external/sse2neon
+		${CMAKE_CURRENT_SOURCE_DIR}/source
 	FILES
-		external/sse2neon/sse2neon.h
-		source/DSP/MLDSPBuffer.h
-		source/DSP/MLDSPFilters.h
-		source/DSP/MLDSPFunctional.h
-		source/DSP/MLDSPGens.h
-		source/DSP/MLDSPMath.h
-		source/DSP/MLDSPMathNEON.h
-		source/DSP/MLDSPMathSSE.h
-		source/DSP/MLDSPOps.h
-		source/DSP/MLDSPProjections.h
-		source/DSP/MLDSPRatio.h
-		source/DSP/MLDSPRouting.h
-		source/DSP/MLDSPSample.h
-		source/DSP/MLDSPScalarMath.h
-		source/DSP/MLDSPScale.h
-		source/DSP/MLDSPUtils.h
+		${CMAKE_CURRENT_SOURCE_DIR}/external/sse2neon/sse2neon.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/app/MLPlatform.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPBuffer.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPFilters.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPFunctional.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPGens.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPMath.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPMathNEON.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPMathSSE.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPOps.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPProjections.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPRatio.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPRouting.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPSample.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPScalarMath.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPScale.h
+		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPUtils.h
+)
+target_include_directories(madronalib INTERFACE
+	$<INSTALL_INTERFACE:include/madronalib>
+	$<INSTALL_INTERFACE:include/madronalib/app>
+	$<INSTALL_INTERFACE:include/madronalib/DSP>
 )
 install(
 	TARGETS madronalib

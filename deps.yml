@@ -85,17 +85,15 @@
   build-type:          cmake
 
 - name:                ez
-  path:                z:/dv/ez
-  #git:                 https://github.com/colugomusic/ez.git
+  git:                 https://github.com/colugomusic/ez.git
   build-type:          cmake
 
 - name:                ads
-  path:                z:/dv/ads
-  #git:                 https://github.com/colugomusic/ads.git
+  git:                 https://github.com/colugomusic/ads.git
   build-type:          cmake
 
 - name:                adrian
-  path:                z:/dv/adrian
+  git:                 https://github.com/colugomusic/adrian.git
   build-type:          cmake
 
 - name:                readerwriterqueue
