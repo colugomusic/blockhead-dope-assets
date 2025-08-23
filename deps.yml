@@ -89,3 +89,7 @@
 - name:                bhas
   git:                 https://github.com/colugomusic/bhas.git
   build-type:          cmake
+
+- name:                ez
+  git:                 https://github.com/colugomusic/ez.git
+  build-type:          cmake
