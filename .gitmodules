@@ -1,0 +1,6 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = git@github.com:colugomusic/dope-godot-cpp.git
+[submodule "madronalib"]
+	path = madronalib
+	url = git@github.com:colugomusic/dope-madronalib.git
